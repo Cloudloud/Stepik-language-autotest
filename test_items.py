@@ -9,7 +9,7 @@ def test_basket_btn_exist(browser):
         WebDriverWait(browser, 10).until(
                 EC.visibility_of_element_located((By.CSS_SELECTOR, ".btn-add-to-basket"))
                 )
-        basket=browser.find_elements_by_css_selector(".btn-a2dd-to-2basket")
+        basket=browser.find_elements_by_css_selector(".btn-add-to-basket")
         assert len(basket)==1, 'Кнопка корзины отсутствует'
     except TimeoutException:
         raise AssertionError('Кнопка не видна на странице')
